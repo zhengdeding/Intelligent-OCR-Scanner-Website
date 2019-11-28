@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Upload File</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+{% endblock %}
+
+{% block body %}
+<div class="frame">
+    <div class="center">
+        <div class="title">
+            <h1>Drop file to upload</h1>
+        </div>
+        <form action="/upload_doc" method="POST" enctype="multipart/form-data">
+            <div class="dropzone">
+                <img src="http://100dayscss.com/codepen/upload.svg" class="upload-icon" />
+                <input type="file" class="upload-input" id="document" name="document" />
+            </div>
+            <button type="submit" class="btn" name="uploadbutton">Upload file</button>
+        </form>
+    </div>
+</div>
+<!-- original pen: https://codepen.io/roydigerhund/pen/ZQdbeN  -->
+
+<!-- NO JS ADDED YET -->
+{% endblock %}
